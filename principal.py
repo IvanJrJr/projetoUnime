@@ -23,15 +23,10 @@ def switch():
             print(random.randint(0, 9), end='')
 
     def alfanumerico():
-        inteiro = n / 3  # particionando a quantidade de caracteres
-        inteiro = int(inteiro)  # transformando em inteiro
         print('Sua senha é:')
-        for i in range(inteiro):
-            print(random.choice(string.ascii_uppercase), end='')  # Letras maiúsculas
-        for j in range(inteiro):
-            print(random.randint(0, 9), end='')  # Números inteiros
-        for k in range(inteiro):
-            print(random.choice(string.ascii_lowercase), end='')  # Letras minúsculas
+        letras_numeros = string.ascii_letters + string.digits
+        for i in range(n):
+            print(random.choice(letras_numeros), end='')  # Letras e Numeros
 
     def senha_forte():
         inteiro = n / 4
