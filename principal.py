@@ -32,8 +32,10 @@ def switch():
         inteiro = n
         inteiro = int(inteiro)
         print('Sua senha é:')
-        for i in range(inteiro):
-            print(random.choice(string.punctuation + string.ascii_letters + string.digits), end='')  # Letras, números e caracteres especiais
+        for i in range(int(inteiro/inteiro)):
+            print(random.choice(string.punctuation), end='')  # caracteres especiais
+        for i in range(inteiro-1):
+            print(random.choice(string.ascii_letters + string.digits), end='') # Letras e números
 
     def erro():
         print('Opção invalida. Tente novamente!')  # Caso o usuário selecione um número diferente de 1, 2, 3.
